@@ -1,0 +1,209 @@
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*General*/
+body {
+  background-color: #f9f9f9;
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 70px;
+}
+
+/*Headers*/
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #623174; 
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  animation: fadeInDown 1s ease;
+  animation-fill-mode: both;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/*Links*/
+a {
+  color: #623174;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  border-bottom: 2px solid #623174;
+}
+
+a:visited {
+  border-bottom: 2px solid #623174;
+}
+
+
+/*Container*/
+.container {
+  width: 750px;
+  margin: 40px auto;
+}
+
+/* Cards */
+.card-white {
+  background-color: white;
+  padding: 40px;
+  margin: 24px 0;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.intro {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px;
+}
+
+.card-white p {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.card-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.12);
+}
+
+/*Profile Picture*/
+.img-circle {
+  margin: 40px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 15px 4px 10px rgba(0,0,0,0.1);
+}
+
+/*Coffee animation*/
+.coffee-hover {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* hidden emojis */
+.coffee-hover::before,
+.coffee-hover::after {
+  content: "☕️";
+  position: absolute;
+  opacity: 0;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+ 
+.coffee-hover::before {
+  top: -10px;
+  left: -10px;
+}
+
+.coffee-hover::after {
+  bottom: -10px;
+  right: -10px;
+}
+
+/* while hover */
+.coffee-hover:hover::before {
+  opacity: 1;
+  transform: translate(-5px, -5px);
+}
+
+.coffee-hover:hover::after {
+  opacity: 1;
+  transform: translate(5px, 5px);
+}
+
+/*Button*/
+.btn-purple {
+  background-color: #623175cc;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: white;
+  color: #623175cc;
+}
+
+/*Lists*/
+
+.projects-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-inline li {
+  display: inline;
+  padding: 20px, 20px;
+}
+
+.list-inline a:hover {
+  transform: scale(1.5);
+}
+
+.list-inline a:visited {
+  text-decoration: none;
+}
+
+/*Icons*/
+i {
+  font-size: 24px;
+  color: #262626;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+i:hover {
+  color: #623174;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
